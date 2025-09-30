@@ -16,6 +16,18 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
+app.use(express.json());
+
+app.patch('/home/:flatNo', async (req, res) => {
+    const { flatNo } = (req.params);
+    const newDueAmount = req.body.DueAmount;
+    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: Number(flatNo) }, { DueAmount: newDueAmount }, { new: true });
+    if (!owner) {
+        return res.status(404).send('Flat owner not found');
+    }
+    res.send(owner);
+});
+
 app.get('/home', async (req, res) => {
     const owners = await FlatOwners.find({});
     res.send(owners);

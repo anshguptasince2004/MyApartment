@@ -1,98 +1,98 @@
 [
     {
         "OwnerName": "Rajnish Kumar",
-        "ContactNumber": 9999908435,
-        "FlatNumber": 101,
+        "PhoneNo": 9999908435,
+        "FlatNo": 101,
         "DueAmount": 0
     },
     {
         "OwnerName": "Owner102",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 102,
+        "PhoneNo": 1234567890,
+        "FlatNo": 102,
         "DueAmount": 500
     },
     {
         "OwnerName": "Owner103",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 103,
+        "PhoneNo": 1234567890,
+        "FlatNo": 103,
         "DueAmount": 0
     },
     {
         "OwnerName": "Owner104",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 104,
+        "PhoneNo": 1234567890,
+        "FlatNo": 104,
         "DueAmount": 200
     },
     {
-        "OwnerName": "Owner105",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 105,
+        "OwnerName": "Owner201",
+        "PhoneNo": 1234567890,
+        "FlatNo": 201,
         "DueAmount": 0
     },
     {
-        "OwnerName": "Owner106",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 106,
+        "OwnerName": "Owner202",
+        "PhoneNo": 1234567890,
+        "FlatNo": 202,
         "DueAmount": 0
     },
     {
-        "OwnerName": "Owner107",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 107,
+        "OwnerName": "Owner203",
+        "PhoneNo": 1234567890,
+        "FlatNo": 203,
         "DueAmount": 100
     },
     {
-        "OwnerName": "Owner108",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 108,
+        "OwnerName": "Owner204",
+        "PhoneNo": 1234567890,
+        "FlatNo": 204,
         "DueAmount": 0
     },
     {
-        "OwnerName": "Owner109",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 109,
+        "OwnerName": "Owner301",
+        "PhoneNo": 1234567890,
+        "FlatNo": 301,
+        "DueAmount": 0
+    },
+    {
+        "OwnerName": "Owner302",
+        "PhoneNo": 1234567890,
+        "FlatNo": 302,
         "DueAmount": 300
     },
     {
-        "OwnerName": "Owner110",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 110,
+        "OwnerName": "Owner303",
+        "PhoneNo": 1234567890,
+        "FlatNo": 303,
         "DueAmount": 0
     },
     {
-        "OwnerName": "Owner111",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 111,
+        "OwnerName": "Owner304",
+        "PhoneNo": 1234567890,
+        "FlatNo": 304,
         "DueAmount": 0
     },
     {
-        "OwnerName": "Owner112",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 112,
+        "OwnerName": "Owner401",
+        "PhoneNo": 1234567890,
+        "FlatNo": 401,
+        "DueAmount": 0
+    },
+    {
+        "OwnerName": "Owner402",
+        "PhoneNo": 1234567890,
+        "FlatNo": 402,
+        "DueAmount": 0
+    },
+    {
+        "OwnerName": "Owner403",
+        "PhoneNo": 1234567890,
+        "FlatNo": 403,
         "DueAmount": 150
     },
     {
-        "OwnerName": "Owner113",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 113,
-        "DueAmount": 0
-    },
-    {
-        "OwnerName": "Owner114",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 114,
-        "DueAmount": 0
-    },
-    {
-        "OwnerName": "Owner115",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 115,
-        "DueAmount": 250
-    },
-    {
-        "OwnerName": "Owner116",
-        "ContactNumber": 1234567890,
-        "FlatNumber": 116,
+        "OwnerName": "Owner404",
+        "PhoneNo": 1234567890,
+        "FlatNo": 404,
         "DueAmount": 0
     }
 ]

@@ -7,4 +7,4 @@ const flatOwnersSchema = new Schema({
     PhoneNo : Number,
     DueAmount : Number,
 });
-module.exports = mongoose.model('Flat Owners', flatOwnersSchema);
+module.exports = mongoose.model('FlatOwner', flatOwnersSchema);
