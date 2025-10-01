@@ -18,7 +18,10 @@ db.once("open", () => {
 
 app.use(express.json());
 
-app.patch('/home/updateDue', async (req, res) => {
+//All the comments I have added are done manually, not by any AI tool
+
+//For adding due amount every month to selected flats
+app.patch('/home/addDue', async (req, res) => {
     try {
         const { FlatNo } = req.body;
         await FlatOwners.updateMany(
@@ -39,26 +42,32 @@ app.patch('/home/updateDue', async (req, res) => {
     }
 });
 
-app.patch('/home/status/:flatNo', async (req, res) => {
+// For editing flat owner details
+app.patch('/home/:flatNo/edit', async (req, res) => {
     const { flatNo } = (req.params);
-    const newStatus = req.body.status;
-    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: Number(flatNo) }, { status: newStatus }, { new: true });
+    const updatedData = req.body;
+    const owner = await FlatOwners.findOneAndUpdate({FlatNo: (flatNo)}, updatedData, { new: true });
     if (!owner) {
         return res.status(404).send('Flat owner not found');
     }
     res.send(owner);
 });
 
-app.patch('/home/:flatNo', async (req, res) => {
+// For updating due amount when paid
+app.patch('/home/:flatNo/paid', async (req, res) => {
     const { flatNo } = (req.params);
-    const newDueAmount = req.body.DueAmount;
-    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: Number(flatNo) }, { DueAmount: newDueAmount }, { new: true });
+    const amountPaid = req.body.amountPaid;
+    if(!amountPaid || amountPaid <= 0) {
+        return res.status(400).send('Invalid amount paid');
+    }
+    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: Number(flatNo) }, { $inc: {DueAmount: -amountPaid} }, { new: true });
     if (!owner) {
         return res.status(404).send('Flat owner not found');
     }
     res.send(owner);
 });
 
+// For fetching all flat owners
 app.get('/home', async (req, res) => {
     const owners = await FlatOwners.find({});
     res.send(owners);
