@@ -3,96 +3,112 @@
         "OwnerName": "Rajnish Kumar",
         "PhoneNo": 9999908435,
         "FlatNo": 101,
-        "DueAmount": 0
+        "DueAmount": 0,
+        "status": "occupied"
     },
     {
         "OwnerName": "Owner102",
         "PhoneNo": 1234567890,
         "FlatNo": 102,
-        "DueAmount": 500
+        "DueAmount": 500,
+        "status": "occupied"
     },
     {
         "OwnerName": "Owner103",
         "PhoneNo": 1234567890,
         "FlatNo": 103,
-        "DueAmount": 0
+        "DueAmount": 0,
+        "status": "vacant"
     },
     {
         "OwnerName": "Owner104",
         "PhoneNo": 1234567890,
         "FlatNo": 104,
-        "DueAmount": 200
+        "DueAmount": 200,
+        "status": "occupied"
     },
     {
         "OwnerName": "Owner201",
         "PhoneNo": 1234567890,
         "FlatNo": 201,
-        "DueAmount": 0
+        "DueAmount": 0,
+        "status": "vacant"
     },
     {
         "OwnerName": "Owner202",
         "PhoneNo": 1234567890,
         "FlatNo": 202,
-        "DueAmount": 0
+        "DueAmount": 100,
+        "status": "occupied"
     },
     {
         "OwnerName": "Owner203",
         "PhoneNo": 1234567890,
         "FlatNo": 203,
-        "DueAmount": 100
+        "DueAmount": 0,
+        "status": "vacant"
     },
     {
         "OwnerName": "Owner204",
         "PhoneNo": 1234567890,
         "FlatNo": 204,
-        "DueAmount": 0
+        "DueAmount": 300,
+        "status": "occupied"
     },
     {
         "OwnerName": "Owner301",
         "PhoneNo": 1234567890,
         "FlatNo": 301,
-        "DueAmount": 0
+        "DueAmount": 0,
+        "status": "vacant"
     },
     {
         "OwnerName": "Owner302",
         "PhoneNo": 1234567890,
         "FlatNo": 302,
-        "DueAmount": 300
+        "DueAmount": 400,
+        "status": "occupied"
     },
     {
         "OwnerName": "Owner303",
         "PhoneNo": 1234567890,
         "FlatNo": 303,
-        "DueAmount": 0
+        "DueAmount": 0,
+        "status": "vacant"
     },
     {
         "OwnerName": "Owner304",
         "PhoneNo": 1234567890,
         "FlatNo": 304,
-        "DueAmount": 0
+        "DueAmount": 150,
+        "status": "occupied"
     },
     {
         "OwnerName": "Owner401",
         "PhoneNo": 1234567890,
         "FlatNo": 401,
-        "DueAmount": 0
+        "DueAmount": 0,
+        "status": "vacant"
     },
     {
         "OwnerName": "Owner402",
         "PhoneNo": 1234567890,
         "FlatNo": 402,
-        "DueAmount": 0
+        "DueAmount": 250,
+        "status": "occupied"
     },
     {
         "OwnerName": "Owner403",
         "PhoneNo": 1234567890,
         "FlatNo": 403,
-        "DueAmount": 150
+        "DueAmount": 0,
+        "status": "vacant"
     },
     {
         "OwnerName": "Owner404",
         "PhoneNo": 1234567890,
         "FlatNo": 404,
-        "DueAmount": 0
+        "DueAmount": 350,
+        "status": "occupied"
     }
 ]
