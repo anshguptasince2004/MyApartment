@@ -18,7 +18,6 @@ db.once("open", () => {
 
 app.use(express.json());
 
-
 app.patch('/home/updateDue', async (req, res) => {
     try {
         const { FlatNo } = req.body;
@@ -49,7 +48,6 @@ app.patch('/home/status/:flatNo', async (req, res) => {
     }
     res.send(owner);
 });
-
 
 app.patch('/home/:flatNo', async (req, res) => {
     const { flatNo } = (req.params);
