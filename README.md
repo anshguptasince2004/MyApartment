@@ -2,6 +2,7 @@
 <br>
 To automate apartment management
 <br>
+
 Project is divided in 3 Phases:
 <br>
 Phase 1: For adminstration to check, update owner info and post notifications, alerts etc.
