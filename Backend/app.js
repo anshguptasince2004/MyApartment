@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const FlatOwners = require('./schema/flatOwners');
+const PaymentRecords = require('./schema/paymentRecords');
 const mongoose = require('mongoose');
 const path = require('path');
 
@@ -55,12 +56,15 @@ app.patch('/home/:flatNo/edit', async (req, res) => {
 
 // For updating due amount when paid
 app.patch('/home/:flatNo/paid', async (req, res) => {
-    const { flatNo } = (req.params);
+    const { flatNo } = (req.params); 
     const amountPaid = req.body.amountPaid;
     if(!amountPaid || amountPaid <= 0) {
         return res.status(400).send('Invalid amount paid');
     }
+    PaymentRecords.FlatNo = Number(flatNo);
     const owner = await FlatOwners.findOneAndUpdate({ FlatNo: Number(flatNo) }, { $inc: {DueAmount: -amountPaid} }, { new: true });
+    PaymentRecords.PaymentHistory.push({ Amount: amountPaid });
+    await PaymentRecords.save();
     if (!owner) {
         return res.status(404).send('Flat owner not found');
     }

@@ -4,7 +4,8 @@ const paymentSchema = new Schema({
     FlatNo: Number,
     PaymentHistory: [{
         Amount: Number,
-        PaidOn: Date, 
+        PaidOn: {type: Date, default: Date.now},
+        Month: {type: String, default: new Date().toISOString().slice(0, 7)},
     }]
 });
 
