@@ -1,14 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const paymentRecords = require('./paymentRecords');
 
 const flatOwnersSchema = new Schema({
     Id : Number,
     OwnerName : String,
     FlatNo : Number,
-    PhoneNo : Number,
+    PhoneNo : String,
     DueAmount : Number,
-    PaymentHistory: [paymentRecords.schema],
     status : {
         type: String,
         enum: ['vacant', 'occupied'],

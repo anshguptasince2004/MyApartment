@@ -1,156 +1,114 @@
 [
   {
     "OwnerName": "Rajnish Kumar",
-    "PhoneNo": 9999908435,
+    "PhoneNo": "9999908435",
     "FlatNo": 101,
     "DueAmount": 0,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 800, "PaidOn": "2025-07-01T10:30:00Z", "Month": "2025-07" },
-      { "Amount": 800, "PaidOn": "2025-08-01T10:25:00Z", "Month": "2025-08" },
-      { "Amount": 800, "PaidOn": "2025-09-01T10:20:00Z", "Month": "2025-09" }
-    ]
+    "status": "occupied"
   },
   {
     "OwnerName": "Owner102",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 102,
     "DueAmount": 500,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 600, "PaidOn": "2025-06-01T09:15:00Z", "Month": "2025-06" },
-      { "Amount": 800, "PaidOn": "2025-07-01T09:10:00Z", "Month": "2025-07" }
-    ]
+    "status": "occupied"
   },
   {
     "OwnerName": "Owner103",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 103,
     "DueAmount": 0,
-    "status": "vacant",
-    "PaymentHistory": []
+    "status": "vacant"
   },
   {
     "OwnerName": "Owner104",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 104,
     "DueAmount": 200,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 800, "PaidOn": "2025-09-05T11:00:00Z", "Month": "2025-09" }
-    ]
+    "status": "occupied"
   },
   {
     "OwnerName": "Owner201",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 201,
     "DueAmount": 0,
-    "status": "vacant",
-    "PaymentHistory": []
+    "status": "vacant"
   },
   {
     "OwnerName": "Owner202",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 202,
     "DueAmount": 100,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 800, "PaidOn": "2025-08-03T08:45:00Z", "Month": "2025-08" },
-      { "Amount": 800, "PaidOn": "2025-09-03T08:42:00Z", "Month": "2025-09" }
-    ]
+    "status": "occupied"
   },
   {
     "OwnerName": "Owner203",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 203,
     "DueAmount": 0,
-    "status": "vacant",
-    "PaymentHistory": []
+    "status": "vacant"
   },
   {
     "OwnerName": "Owner204",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 204,
     "DueAmount": 300,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 600, "PaidOn": "2025-07-10T09:30:00Z", "Month": "2025-07" },
-      { "Amount": 800, "PaidOn": "2025-08-10T09:27:00Z", "Month": "2025-08" }
-    ]
+    "status": "occupied"
   },
   {
     "OwnerName": "Owner301",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 301,
     "DueAmount": 0,
-    "status": "vacant",
-    "PaymentHistory": []
+    "status": "vacant"
   },
   {
     "OwnerName": "Owner302",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 302,
     "DueAmount": 400,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 800, "PaidOn": "2025-07-01T10:00:00Z", "Month": "2025-07" },
-      { "Amount": 800, "PaidOn": "2025-08-01T10:05:00Z", "Month": "2025-08" }
-    ]
+    "status": "occupied"
   },
   {
     "OwnerName": "Owner303",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 303,
     "DueAmount": 0,
-    "status": "vacant",
-    "PaymentHistory": []
+    "status": "vacant"
   },
   {
     "OwnerName": "Owner304",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 304,
     "DueAmount": 150,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 600, "PaidOn": "2025-06-05T11:00:00Z", "Month": "2025-06" },
-      { "Amount": 800, "PaidOn": "2025-07-05T11:05:00Z", "Month": "2025-07" }
-    ]
+    "status": "occupied"
   },
   {
     "OwnerName": "Owner401",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 401,
     "DueAmount": 0,
-    "status": "vacant",
-    "PaymentHistory": []
+    "status": "vacant"
   },
   {
     "OwnerName": "Owner402",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 402,
     "DueAmount": 250,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 800, "PaidOn": "2025-08-10T12:00:00Z", "Month": "2025-08" }
-    ]
+    "status": "occupied"
   },
   {
     "OwnerName": "Owner403",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 403,
     "DueAmount": 0,
-    "status": "vacant",
-    "PaymentHistory": []
+    "status": "vacant"
   },
   {
     "OwnerName": "Owner404",
-    "PhoneNo": 1234567890,
+    "PhoneNo": "1234567890",
     "FlatNo": 404,
     "DueAmount": 350,
-    "status": "occupied",
-    "PaymentHistory": [
-      { "Amount": 600, "PaidOn": "2025-07-03T09:00:00Z", "Month": "2025-07" },
-      { "Amount": 800, "PaidOn": "2025-08-03T09:05:00Z", "Month": "2025-08" }
-    ]
+    "status": "occupied"
   }
 ]

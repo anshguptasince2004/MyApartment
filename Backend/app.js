@@ -47,7 +47,7 @@ app.patch('/home/addDue', async (req, res) => {
 app.patch('/home/:flatNo/edit', async (req, res) => {
     const { flatNo } = (req.params);
     const updatedData = req.body;
-    const owner = await FlatOwners.findOneAndUpdate({FlatNo: (flatNo)}, updatedData, { new: true });
+    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: (flatNo) }, updatedData, { new: true });
     if (!owner) {
         return res.status(404).send('Flat owner not found');
     }
@@ -56,20 +56,50 @@ app.patch('/home/:flatNo/edit', async (req, res) => {
 
 // For updating due amount when paid
 app.patch('/home/:flatNo/paid', async (req, res) => {
-    const { flatNo } = (req.params); 
-    const amountPaid = req.body.amountPaid;
-    if(!amountPaid || amountPaid <= 0) {
-        return res.status(400).send('Invalid amount paid');
+    const { flatNo } = (req.params);
+    const amountPaid = Number(req.body.amountPaid);
+    
+
+    if (!amountPaid || amountPaid <= 0) {
+        return res.status(400).send('Invalid amount entered');
     }
-    PaymentRecords.FlatNo = Number(flatNo);
-    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: Number(flatNo) }, { $inc: {DueAmount: -amountPaid} }, { new: true });
-    PaymentRecords.PaymentHistory.push({ Amount: amountPaid });
-    await PaymentRecords.save();
+
+    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: Number(flatNo) }, { $inc: { DueAmount: -amountPaid } }, { new: true });
     if (!owner) {
         return res.status(404).send('Flat owner not found');
     }
-    res.send(owner);
+
+    const paymentRecord = await PaymentRecords.findOneAndUpdate(
+        { FlatNo: flatNo },
+        { $push: {PaymentHistory: {Amount: amountPaid, PaidOn: new Date(), RemainingDue: owner.DueAmount}} },
+        { new: true, upsert: true }
+    );
+    res.json({ owner, paymentRecord });
 });
+
+//For fetching payment history of a flat
+app.get('/home/:flatNo/payments', async (req, res) => {
+    try {
+        const flatNo = Number(req.params.flatNo);
+
+        if (Number.isNaN(flatNo)) {
+            return res.status(400).json({ error: 'Invalid flat number' });
+        }
+
+        const record = await PaymentRecords.findOne({ FlatNo: flatNo });
+
+        if (!record) return res.status(404).json({ error: "No payment history" });
+
+        // Sort by most recent first
+        const sorted = record.PaymentHistory.sort((a, b) => new Date(b.PaidOn) - new Date(a.PaidOn));
+
+        return res.json(sorted);
+    } catch (err) {
+        console.error('GET /home/:flatNo/payments error:', err);
+        return res.status(500).json({ error: 'Server error' });
+    }
+});
+
 
 // For fetching all flat owners
 app.get('/home', async (req, res) => {

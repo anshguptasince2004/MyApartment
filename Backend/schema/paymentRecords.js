@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const paymentSchema = new Schema({
-    FlatNo: Number,
-    PaymentHistory: [{
-        Amount: Number,
-        PaidOn: {type: Date, default: Date.now},
-        Month: {type: String, default: new Date().toISOString().slice(0, 7)},
-    }]
+  FlatNo: { type: Number, required: true, index: true },
+  PaymentHistory: [{
+    Amount: { type: Number, required: true },
+    PaidOn: { type: Date, default: Date.now },
+    RemainingDue: { type: Number, default: 0 }
+  }]
 });
 
 module.exports = mongoose.model('Payment', paymentSchema);
