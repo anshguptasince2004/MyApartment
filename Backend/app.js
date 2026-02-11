@@ -47,7 +47,7 @@ app.patch('/home/addDue', async (req, res) => {
 app.patch('/home/:flatNo/edit', async (req, res) => {
     const { flatNo } = (req.params);
     const updatedData = req.body;
-    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: (flatNo) }, updatedData, { new: true });
+    const owner = await FlatOwners.findOneAndUpdate({ FlatNo: Number(flatNo) }, updatedData, { new: true });
     if (!owner) {
         return res.status(404).send('Flat owner not found');
     }
@@ -58,7 +58,7 @@ app.patch('/home/:flatNo/edit', async (req, res) => {
 app.patch('/home/:flatNo/paid', async (req, res) => {
     const { flatNo } = (req.params);
     const amountPaid = Number(req.body.amountPaid);
-    
+
 
     if (!amountPaid || amountPaid <= 0) {
         return res.status(400).send('Invalid amount entered');
@@ -71,7 +71,7 @@ app.patch('/home/:flatNo/paid', async (req, res) => {
 
     const paymentRecord = await PaymentRecords.findOneAndUpdate(
         { FlatNo: flatNo },
-        { $push: {PaymentHistory: {Amount: amountPaid, PaidOn: new Date(), RemainingDue: owner.DueAmount}} },
+        { $push: { PaymentHistory: { Amount: amountPaid, PaidOn: new Date(), RemainingDue: owner.DueAmount } } },
         { new: true, upsert: true }
     );
     res.json({ owner, paymentRecord });
@@ -86,7 +86,7 @@ app.get('/home/:flatNo/payments', async (req, res) => {
             return res.status(400).json({ error: 'Invalid flat number' });
         }
 
-        const record = await PaymentRecords.findOne({ FlatNo: flatNo });
+        const record = await PaymentRecords.findOne({ FlatNo: Number(flatNo) });
 
         if (!record) return res.status(404).json({ error: "No payment history" });
 
@@ -98,6 +98,11 @@ app.get('/home/:flatNo/payments', async (req, res) => {
         console.error('GET /home/:flatNo/payments error:', err);
         return res.status(500).json({ error: 'Server error' });
     }
+});
+
+//Current apartment balance
+app.get('/home/balance', async (req, res) => {
+
 });
 
 

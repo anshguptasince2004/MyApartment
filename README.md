@@ -1,6 +1,6 @@
 # MyApartment - The apartment management system!
 <br>
-To automate apartment management
+To automate apartment management.
 <br>
 
 Project is divided in 3 Phases:
